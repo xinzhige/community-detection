@@ -1,5 +1,5 @@
 # This program is to calculate the modularity 
-# by given a matrix-like graph and a vector-like membership
+# by given an igraph object and a membership vector
 # Need to install the igraph package
 
 library(igraph)
