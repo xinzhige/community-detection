@@ -1,3 +1,6 @@
+# Implement a density function that is used to measure how good a
+# community structure is in one social network
+
 import numpy as np
 
 
