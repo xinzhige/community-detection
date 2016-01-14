@@ -7,16 +7,16 @@ def density(similarity, indicator):
     result = 0 
     for j in range(n):
         num_nodes = np.count_nonzero(indicator[:, j]) 
-	      nodes = indicator[:, j].nonzero()[0].tolist()
-	      num_edges = 0
+	    nodes = indicator[:, j].nonzero()[0].tolist()
+	    num_edges = 0
         for i in nodes:
             for k in nodes:
                 if i < k and similarity[i, k].all():
                     num_edges += 1
-	      denominator = ((num_nodes * (num_nodes - 1)) / 2 - (num_nodes - 1))
-	      if denominator != 0:
-	          tmp = (num_edges - (num_nodes - 1)) / denominator
-	      else:
+	    denominator = ((num_nodes * (num_nodes - 1)) / 2 - (num_nodes - 1))
+	    if denominator != 0:
+	        tmp = (num_edges - (num_nodes - 1)) / denominator
+	    else:
             tmp = 0
         result += (tmp * num_edges) / n
     return result
